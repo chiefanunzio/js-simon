@@ -15,7 +15,7 @@
 // pusho i numeri in un array
 
 
-function getRandon(min, max){   //funzione random
+function getRandom(min, max) { //funzione random
 
     var maxRnd = max;
     var minRnd = min;
@@ -24,12 +24,45 @@ function getRandon(min, max){   //funzione random
     return res
 }
 
-function cycleNum(){   //funzione ciclo x5 
+function cycleNum() { //funzione ciclo x5 
 
-    for(i = 0; i<5;i++){
-        var res = getRandom(1, 100);
+    var num = [];
+
+    while(num.length < 5){
+        var rndNum = getRandom(1, 100);
+        if(!num.includes(rndNum)){
+            num.push(rndNum);
+        }
+
     }
+    
+    return [num];
+
+    
+}
+
+function user(){
+
+    var num = [];
+
+    while(num.length < 5){
+        var numUser = parseInt(prompt('prova ad indovinare i 5 numeri!'));
+        if(!num.includes(numUser)){
+            num.push(numUser)
+        }else{
+            alert('hai giá inserito questo numero');
+        }
+    }
+     
+    return [num];
 
 }
 
+cycleNum();
+user();
+
+function checkRes(){
+
+    
+}
 
