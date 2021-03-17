@@ -13,6 +13,7 @@
 // creo un timer di 30 secondi
 // scaduto il tempo ciclare 5 prompt per chiedere all'utente 5 numeri da indovinare
 // pusho i numeri in un array
+//controllo se i numeri del prompt sono inclusi nell'arrey
 
 
 function getRandom(min, max) { //funzione random
@@ -28,42 +29,57 @@ function cycleNum() { //funzione ciclo x5
 
     var num = [];
 
-    while(num.length < 5){
-        var rndNum = getRandom(1, 6);
-        if(!num.includes(rndNum)){
+    while (num.length < 5) {
+        var rndNum = getRandom(1, 10);
+        if (!num.includes(rndNum)) {
             num.push(rndNum);
         }
 
     }
-    console.log([num]);
-    return [num];
 
-    
+    alert(num);
+
+    return num
 }
+var pcNumber = cycleNum();
 
-function user(){
-
+setTimeout(function () {
+    var win = [];
     var num = [];
-
-    while(num.length < 5){
+    
+    while (num.length < 5) {
         var numUser = parseInt(prompt('prova ad indovinare i 5 numeri!'));
-        if(!num.includes(numUser)){
+        if (!num.includes(numUser)) {
             num.push(numUser)
-        }else{
+            console.log(num)
+            if (pcNumber.includes(numUser)) {
+                win.push(numUser);
+                
+            }
+        } else {
             alert('hai giá inserito questo numero');
         }
-        
-    }
-     
-    return num;
-}
 
-user();
+    }
+    console.log('i numeri vincenti sono ' + win.length + ' = ' + win );
+    
+}, 1000);
+
+
+
+
+
+
+
+
+
+
+// user();
 // function checkRes(){
 //     var pc = cycleNum();
 //     var us = user();
 //     var win = [];
-   
+
 
 // }
 
