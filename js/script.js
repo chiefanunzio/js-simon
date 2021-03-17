@@ -61,26 +61,6 @@ setTimeout(function () {
         }
 
     }
-    console.log('i numeri vincenti sono ' + win.length + ' = ' + win );
+    var res = document.getElementById('test').innerHTML = 'i numeri vincenti sono ' + win.length + ' = ' + win
     
 }, 1000);
-
-
-
-
-
-
-
-
-
-
-// user();
-// function checkRes(){
-//     var pc = cycleNum();
-//     var us = user();
-//     var win = [];
-
-
-// }
-
-// checkRes();
