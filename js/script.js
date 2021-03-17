@@ -29,13 +29,13 @@ function cycleNum() { //funzione ciclo x5
     var num = [];
 
     while(num.length < 5){
-        var rndNum = getRandom(1, 100);
+        var rndNum = getRandom(1, 6);
         if(!num.includes(rndNum)){
             num.push(rndNum);
         }
 
     }
-    
+    console.log([num]);
     return [num];
 
     
@@ -52,17 +52,19 @@ function user(){
         }else{
             alert('hai giá inserito questo numero');
         }
+        
     }
      
-    return [num];
-
+    return num;
 }
 
-cycleNum();
 user();
+// function checkRes(){
+//     var pc = cycleNum();
+//     var us = user();
+//     var win = [];
+   
 
-function checkRes(){
+// }
 
-    
-}
-
+// checkRes();
